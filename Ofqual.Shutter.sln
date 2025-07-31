@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ofqual.Shutter.Web", "Ofqual.Shutter.Web\Ofqual.Shutter.Web.csproj", "{732164E7-1BBA-4D0D-93F9-9A056C2F91DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ofqual.Shutter.Tests", "Ofqual.Shutter.Tests\Ofqual.Shutter.Tests.csproj", "{AD361186-B6B7-4115-AB73-A4389CD593C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{732164E7-1BBA-4D0D-93F9-9A056C2F91DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732164E7-1BBA-4D0D-93F9-9A056C2F91DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732164E7-1BBA-4D0D-93F9-9A056C2F91DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732164E7-1BBA-4D0D-93F9-9A056C2F91DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD361186-B6B7-4115-AB73-A4389CD593C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD361186-B6B7-4115-AB73-A4389CD593C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD361186-B6B7-4115-AB73-A4389CD593C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD361186-B6B7-4115-AB73-A4389CD593C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08794A9B-368B-467F-A5DC-1DA5D13CAD46}
+	EndGlobalSection
+EndGlobal

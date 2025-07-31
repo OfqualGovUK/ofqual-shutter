@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Shutter Page";
+    ViewData["HeaderTitle"] = "Shutter Page";
+
+    Layout = "_GovUkPageTemplate";
+}
+
+@section Header {
+    @await Html.PartialAsync("_Header.cshtml")
+}
+
+@RenderBody()
+
+@section Footer {
+    @await Html.PartialAsync("_Footer.cshtml")
+}
