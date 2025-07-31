@@ -1,6 +1,6 @@
 # Ofqual Shutter Page
 
-Ofqual shutter page shutter page is displayed when a service is temporarily unavailable.
+Ofqual shutter page is displayed when a service is temporarily unavailable.
 
 It may be shown during:
 
