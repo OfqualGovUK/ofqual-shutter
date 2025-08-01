@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ofqual.Shutter.Web", "Ofqual.Shutter.Web\Ofqual.Shutter.Web.csproj", "{732164E7-1BBA-4D0D-93F9-9A056C2F91DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ofqual.Shutter.Web", "Ofqual.Shutter.Web\Ofqual.Shutter.Web.csproj", "{732164E7-1BBA-4D0D-93F9-9A056C2F91DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ofqual.Shutter.Tests", "Ofqual.Shutter.Tests\Ofqual.Shutter.Tests.csproj", "{AD361186-B6B7-4115-AB73-A4389CD593C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ofqual.Shutter.Tests", "Ofqual.Shutter.Tests\Ofqual.Shutter.Tests.csproj", "{AD361186-B6B7-4115-AB73-A4389CD593C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
