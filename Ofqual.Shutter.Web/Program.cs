@@ -1,6 +1,7 @@
 using System.Reflection;
 using GovUk.Frontend.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
+using Ofqual.Shutter.Web.Models;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.Http;
@@ -13,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddGovUkFrontend();
 
 // Add Controllers with Views
-builder.Services.AddControllersWithViews(options => 
+builder.Services.AddControllersWithViews(options =>
 {
     options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
 });
@@ -40,6 +41,8 @@ builder.Host.UseSerilog((ctx, svc, cfg) => cfg
 
 // Register essential services
 builder.Services.AddHttpContextAccessor();
+
+builder.Services.Configure<HoldingPageConfigurationModel>(builder.Configuration.GetSection("HoldingPage"));
 
 #endregion
 

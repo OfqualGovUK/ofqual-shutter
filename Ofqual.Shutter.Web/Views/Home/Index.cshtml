@@ -1,5 +1,28 @@
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Shutter page</h1>
-    </div>
+@using Ofqual.Shutter.Web.Models
+
+@model HoldingPageConfigurationViewModel
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-l">Sorry, the @Model.ServiceName service  is unavailable</h1>
+                @if (Model.Downtime.HasValue)
+                {
+                    <p class="govuk-body">You will be able to use the service from @Model.Downtime.Value.ToString("f")</p>
+                }
+                else
+                {
+                    <p class="govuk-body">You will be able to use the service later.</p>
+                }
+                <p class="govuk-body">
+                    <a class="govuk-link" href="@Model.ContactUrl">@Model.ContactUrlText</a> @Model.ContactInfo
+                </p>
+            </div>
+        </div>
+    </main>
 </div>
