@@ -10,7 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 #region Services
 
 // Add GovUK frontend
-builder.Services.AddGovUkFrontend();
+builder.Services.AddGovUkFrontend(options => 
+{
+    options.Rebrand = true; 
+});
 
 // Add Controllers with Views
 builder.Services.AddControllersWithViews(options => 
