@@ -1,6 +1,7 @@
 using System.Reflection;
 using GovUk.Frontend.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
+using Ofqual.Shutter.Web.Models;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.Http;
@@ -16,7 +17,7 @@ builder.Services.AddGovUkFrontend(options =>
 });
 
 // Add Controllers with Views
-builder.Services.AddControllersWithViews(options => 
+builder.Services.AddControllersWithViews(options =>
 {
     options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
 });
@@ -43,6 +44,8 @@ builder.Host.UseSerilog((ctx, svc, cfg) => cfg
 
 // Register essential services
 builder.Services.AddHttpContextAccessor();
+
+builder.Services.Configure<ShutterPageConfigurationModel>(builder.Configuration.GetSection("ShutterPage"));
 
 #endregion
 
