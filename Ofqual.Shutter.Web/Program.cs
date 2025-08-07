@@ -42,7 +42,7 @@ builder.Host.UseSerilog((ctx, svc, cfg) => cfg
 // Register essential services
 builder.Services.AddHttpContextAccessor();
 
-builder.Services.Configure<HoldingPageConfigurationModel>(builder.Configuration.GetSection("HoldingPage"));
+builder.Services.Configure<ShutterPageConfigurationModel>(builder.Configuration.GetSection("ShutterPage"));
 
 #endregion
 

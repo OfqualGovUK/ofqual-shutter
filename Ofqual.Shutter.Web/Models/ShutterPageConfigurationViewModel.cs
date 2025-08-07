@@ -1,6 +1,6 @@
 ﻿namespace Ofqual.Shutter.Web.Models;
 
-public class HoldingPageConfigurationViewModel
+public class ShutterPageConfigurationViewModel
 {
     // Service Information
     public required string ServiceName { get; set; }

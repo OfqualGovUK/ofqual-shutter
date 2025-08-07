@@ -14,16 +14,16 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var holdingPageConfigurationViewModel = new HoldingPageConfigurationViewModel
+        var shutterPageConfigurationViewModel = new ShutterPageConfigurationViewModel
         {
-            ServiceName = _config["HoldingPage:SERVICE_NAME"] ?? "Ofqual Recognition",
-            Downtime = DateTime.TryParse(_config["HoldingPage:DOWNTIME"], out var downtime) ? downtime : null,
-            ContactInfo = _config["HoldingPage:CONTACT_INFO"] ?? "Contact Ofqual Support.",
-            ContactUrl = _config["HoldingPage:CONTACT_URL"] ?? "https://www.ofqual.gov.uk/contact-us/",
-            ContactUrlText = _config["HoldingPage:CONTACT_URL_TEXT"] ?? "Contact Ofqual Support"
+            ServiceName = _config["ShutterPage:SERVICE_NAME"] ?? "Ofqual Recognition",
+            Downtime = DateTime.TryParse(_config["ShutterPage:DOWNTIME"], out var downtime) ? downtime : null,
+            ContactInfo = _config["ShutterPage:CONTACT_INFO"] ?? "Contact Ofqual Support.",
+            ContactUrl = _config["ShutterPage:CONTACT_URL"] ?? "https://www.ofqual.gov.uk/contact-us/",
+            ContactUrlText = _config["ShutterPage:CONTACT_URL_TEXT"] ?? "Contact Ofqual Support"
         };
 
-        return View(holdingPageConfigurationViewModel);
+        return View(shutterPageConfigurationViewModel);
     }
 }
 
