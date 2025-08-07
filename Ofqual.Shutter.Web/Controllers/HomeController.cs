@@ -16,11 +16,11 @@ public class HomeController : Controller
     {
         var shutterPageConfigurationViewModel = new ShutterPageConfigurationViewModel
         {
-            ServiceName = _config["ShutterPage:SERVICE_NAME"] ?? "Ofqual Recognition",
-            Downtime = DateTime.TryParse(_config["ShutterPage:DOWNTIME"], out var downtime) ? downtime : null,
-            ContactInfo = _config["ShutterPage:CONTACT_INFO"] ?? "Contact Ofqual Support.",
-            ContactUrl = _config["ShutterPage:CONTACT_URL"] ?? "https://www.ofqual.gov.uk/contact-us/",
-            ContactUrlText = _config["ShutterPage:CONTACT_URL_TEXT"] ?? "Contact Ofqual Support"
+            ServiceName = _config["ShutterPage:Sservice_Name"] ?? "Ofqual Recognition",
+            Downtime = DateTime.TryParse(_config["ShutterPage:Downtime"], out var downtime) ? downtime : null,
+            ContactInfo = _config["ShutterPage:Contact_Info"] ?? "Contact Ofqual Support.",
+            ContactUrl = _config["ShutterPage:Contact_Url"] ?? "https://www.ofqual.gov.uk/contact-us/",
+            ContactUrlText = _config["ShutterPage:Contact_Url_Text"] ?? "Contact Ofqual Support"
         };
 
         return View(shutterPageConfigurationViewModel);
