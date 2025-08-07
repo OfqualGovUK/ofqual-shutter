@@ -18,8 +18,8 @@ public class HomeController : Controller
         {
             ServiceName = _config["ShutterPage:Sservice_Name"] ?? "Ofqual Recognition",
             Downtime = DateTime.TryParse(_config["ShutterPage:Downtime"], out var downtime) ? downtime : null,
-            ContactInfo = _config["ShutterPage:Contact_Info"] ?? "Contact Ofqual Support.",
-            ContactUrl = _config["ShutterPage:Contact_Url"] ?? "https://www.ofqual.gov.uk/contact-us/",
+            ContactInfo = _config["ShutterPage:Contact_Info"] ?? "if you require urgent assistance please contact the helpline.",
+            ContactUrl = _config["ShutterPage:Contact_Url"] ?? "https://www.gov.uk/guidance/contact-ofqual",
             ContactUrlText = _config["ShutterPage:Contact_Url_Text"] ?? "Contact Ofqual Support"
         };
 
