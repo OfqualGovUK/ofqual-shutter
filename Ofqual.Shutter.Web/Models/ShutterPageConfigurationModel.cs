@@ -8,6 +8,6 @@ public class ShutterPageConfigurationModel
     public DateTime? Downtime { get; set; }
     public required string ContactInfo { get; set; }
     public required string ContactUrl { get; set; }
-    public string ContactUrlText { get; set; } = "Contact Ofqual Support";
+    public required string ContactUrlText { get; set; }
 }
 
