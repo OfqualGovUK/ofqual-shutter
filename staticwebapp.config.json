@@ -1,8 +1,5 @@
 {
     "navigationFallback": {
         "rewrite": "/index.html" // forces all URL routes to go to the index.html
-    },
-    "platform": {
-        "apiRuntime": "node:22"
     }
 }
