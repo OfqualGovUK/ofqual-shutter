@@ -92,10 +92,6 @@ stages:
       steps:
         - checkout: self
           submodules: true
-        - task: NodeTool@0
-          inputs:
-            versionSpec: '22.x'
-          displayName: 'Install Node.js'
         - task: AzureStaticWebApp@0
           inputs:
             app_location: '/' # App source code path relative to cwd
