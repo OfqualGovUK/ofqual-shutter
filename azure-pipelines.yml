@@ -59,31 +59,22 @@ stages:
           command: custom
           verbose: false
           customCommand: "run build"
-        # Step 4: Install and authenticate Snyk
-      - script: |
-          npm install -g snyk
-          snyk config set endpoint=$(SNYK_ENDPOINT)
-          snyk auth $(SNYK_TOKEN)
-          set +e
-        displayName: 'Snyk Install & Auth'
-      # Step 5: Scan code
+      # Step 4: Scan code
       - task: SnykSecurityScan@1
         displayName: 'Synk code scan'
         inputs:
           testType: 'code'
           serviceConnectionEndpoint: $(SERVICE_CONNECTION_ENDPOINT) #this is a local variable not library
-          monitorWhen: 'always'
           codeSeverityThreshold: 'high'
-          failOnIssues: false
-      # Step 6: Scan app
+          failOnIssues: true
+      # Step 5: Scan app
       - task: SnykSecurityScan@1
         displayName: 'Synk app scan'
         inputs:
           testType: 'app'
           serviceConnectionEndpoint: $(SERVICE_CONNECTION_ENDPOINT) #this is a local variable not library
-          monitorWhen: 'always'
           severityThreshold: 'high'
-          failOnIssues: false
+          failOnIssues: true
           additionalArguments: '--all-projects'    
 - stage: BuildAndDeploy
   jobs:
