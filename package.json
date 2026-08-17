@@ -9,14 +9,14 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "7.1.7"
+    "vite": "7.3.6"
   },
   "dependencies": {
     "govuk-frontend": "5.12.0",
     "sass": "1.102.0"
   },
   "overrides": {
-    "immutable" : "5.1.9"
+    "immutable": "5.1.9"
   },
   "engines": {
     "node": "22.x"
